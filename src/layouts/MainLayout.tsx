@@ -14,6 +14,7 @@ import Header12 from "@/shared/header/Header12";
 import Header13 from "@/shared/header/Header13";
 import Header14 from "@/shared/header/Header14";
 import Header15 from "@/shared/header/Header15";
+import HeaderPortfolio from "@/shared/header/HeaderPortfolio";
 import Footer1 from "@/shared/footer/Footer1";
 import Footer2 from "@/shared/footer/Footer2";
 import Footer3 from "@/shared/footer/Footer3";
@@ -59,6 +60,8 @@ const HEADER_COMPONENTS: Record<number, React.ComponentType<HeaderHandlers>> = {
   13: Header13,
   14: Header14,
   15: Header15,
+  // Custom portfolio navbar (used by PortfolioLayout).
+  99: HeaderPortfolio,
 };
 
 const FOOTER_COMPONENTS: Record<number, React.ComponentType> = {
