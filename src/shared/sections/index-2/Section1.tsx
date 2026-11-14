@@ -50,7 +50,7 @@ export default function Section1({ classList }: { classList?: string }) {
                         <div className="col-xxl-2 col-lg-5 col-md-6 col-12">
                             <div className="alt-hero-service at-hero-service mt-40">
                                 <ul>
-                                    <li>{LOGO_SVG}</li>
+                                    <li className="mb-4 pb-2">{LOGO_SVG}</li>
                                     <li>
                                         <span className="fz-font-md fw-500 common-black">
                                             We collaborate with the world&apos;s leading platforms and partners to deliver

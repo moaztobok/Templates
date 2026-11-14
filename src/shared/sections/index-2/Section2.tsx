@@ -42,13 +42,13 @@ const SERVICE_BTN_CLASS =
 
 export default function Section2() {
     return (
-        <section className="sec-2-home-2 container-2200">
+        <section className="sec-2-home-2 container-2200 mb-100">
             <div className="mx-4 pt-20 pb-20">
-                <div className="d-flex align-items-center justify-content-between">
+                {/* <div className="d-flex align-items-center justify-content-between">
                     {CIRCLE_SVG}
                     {CIRCLE_SVG}
                     {CIRCLE_SVG}
-                </div>
+                </div> */}
             </div>
             <div
                 className="bg-coating rounded-5 overflow-hidden mx-lg-3 mx-2 bg-cover"

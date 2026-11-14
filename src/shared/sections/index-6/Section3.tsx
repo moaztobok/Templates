@@ -84,7 +84,7 @@ const portfolioItems = [
 
 export default function Section3() {
   return (
-    <div className="sec-3-home-6 pb-110">
+    <div className="sec-3-home-6 pb-100 pt-100">
       <div className="container">
         <div className="row mb-50">
           <div className="col-12">
@@ -135,7 +135,7 @@ export default function Section3() {
                 <Link className="cursor-hide" to={item.link}>
                   <img
                     data-speed=".8"
-                    className="w-100"
+                    className="w-100 rounded-4"
                     src={item.img}
                     alt={item.title} loading="lazy" />
                 </Link>
