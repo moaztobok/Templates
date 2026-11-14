@@ -1,4 +1,6 @@
-import { Link } from "react-router-dom";
+"use client";
+
+import Link from "next/link";
 import RevealText from "@/shared/effects/RevealText";
 
 // Home 6 Section 3 - Case Studies / Handpicked Projects
@@ -94,7 +96,7 @@ export default function Section3() {
               </span>
               <Link
                 className="at-btn common-black text-uppercase bg-transparent mb-10 rounded-0 p-0"
-                to="/portfolio-1"
+                href="/portfolio-1"
               >
                 <span className="text-uppercase">
                   <span className="text-1">Explore all</span>
@@ -132,7 +134,7 @@ export default function Section3() {
               <div
                 className={`mg-portfolio-thumb ${item.style} anim-zoomin not-hide-cursor`}
               >
-                <Link className="cursor-hide" to={item.link}>
+                <Link className="cursor-hide" href={item.link}>
                   <img
                     data-speed=".8"
                     className="w-100 rounded-4"
@@ -143,7 +145,7 @@ export default function Section3() {
               <div className="mg-portfolio-content cs-portfolio-content d-flex align-items-center flex-wrap flex-md-nowrap justify-content-between">
                 <div className="w-md-75">
                   <h3 className="h5 cs-portfolio-title at-title-anim fix mr-20 at-ff-sequel-semi-bold">
-                    <Link to={item.link} className="at-title-text">
+                    <Link href={item.link} className="at-title-text">
                       {item.title}
                     </Link>
                   </h3>
@@ -153,7 +155,7 @@ export default function Section3() {
                   <ul className="d-flex justify-content-md-end flex-wrap text-nowrap">
                     {item.tags.map((tag, tagIndex) => (
                       <li key={tagIndex}>
-                        <Link to="#">{tag}</Link>
+                        <Link href="#">{tag}</Link>
                       </li>
                     ))}
                   </ul>
@@ -189,7 +191,7 @@ export default function Section3() {
                     clarity, creativity, and performance.
                   </RevealText>
                 </h5>
-                <Link className="at-btn rounded-0" to="/archive-2">
+                <Link className="at-btn rounded-0" href="/archive-2">
                   <span>
                     <span className="text-1">Get a free quote</span>
                     <span className="text-2">Get a free quote</span>

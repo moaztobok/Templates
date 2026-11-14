@@ -1,4 +1,6 @@
-import { Link } from "react-router-dom";
+"use client";
+
+import Link from "next/link";
 import RevealText from "@/shared/effects/RevealText";
 
 // About 3 Section 1 - About me + banner + Experience / Journey
@@ -81,18 +83,18 @@ export default function Section1() {
                                 data-fade-from="bottom"
                                 data-ease="bounce"
                             >
-                                <Link className="at-btn-circle" to="/portfolio-1">
+                                <Link className="at-btn-circle" href="/portfolio-1">
                                     {ARROW_CIRCLE_SVG}
                                 </Link>
-                                <Link className="at-btn z-index-1" to="/portfolio-1">
+                                <Link className="at-btn z-index-1" href="/portfolio-1">
                                     See my work
                                 </Link>
-                                <Link className="at-btn-circle" to="/portfolio-1">
+                                <Link className="at-btn-circle" href="/portfolio-1">
                                     {ARROW_CIRCLE_SVG}
                                 </Link>
                             </div>
                             <Link
-                                to="#"
+                                href="#"
                                 className="at-btn common-black border-bottom-900 text-uppercase bg-transparent rounded-0 p-0 pb-2"
                             >
                                 <span className="text-uppercase">
@@ -149,7 +151,7 @@ export default function Section1() {
                                             <h6 className="journey-list__title neutral-900">{item.title}</h6>
                                             <p className="journey-list__desc neutral-500">{item.desc}</p>
                                         </div>
-                                        <Link to="#" className="journey-list__link neutral-900" aria-label="View details">
+                                        <Link href="#" className="journey-list__link neutral-900" aria-label="View details">
                                             {ARROW_SVG}
                                         </Link>
                                     </li>

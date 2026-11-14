@@ -1,4 +1,6 @@
-import { Link } from "react-router-dom";
+"use client";
+
+import Link from "next/link";
 const ARROW_SVG = (
     <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -61,7 +63,7 @@ function RelatedCardItem({ img, alt, tag, title, description, projectName, conte
     return (
         <div className="alt-portfolio-item at-hover-item mb-30">
             <Link
-                to={DETAIL_LINK}
+                href={DETAIL_LINK}
                 className={`alt-portfolio-thumb p-relative fix d-block ${contentMt15 ? "" : "mb-15"}`.trim()}
             >
                 <span className="w-100 d-block scale-img-from-to" data-value-1="1.5" data-value-2="1">
@@ -84,7 +86,7 @@ function RelatedCardItem({ img, alt, tag, title, description, projectName, conte
             </Link>
             <div className={`alt-portfolio-content d-flex justify-content-between align-items-center ${contentMt15 ? "mt-15" : ""}`.trim()}>
                 <h5 className="alt-portfolio-title mb-0">
-                    <Link to={DETAIL_LINK} className="common-underline">
+                    <Link href={DETAIL_LINK} className="common-underline">
                         {projectName}
                     </Link>
                 </h5>

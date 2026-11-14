@@ -1,0 +1,13 @@
+:HL["https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100..1000&display=swap","style"]
+:HL["/assets/css/vendors/carouselTicker.css","style"]
+:HL["/assets/css/vendors/bootstrap.min.css","style"]
+:HL["/assets/css/vendors/swiper-bundle.min.css","style"]
+:HL["/assets/css/vendors/nice-select.css","style"]
+:HL["/assets/css/vendors/font-awesome-pro.css","style"]
+:HL["/assets/css/vendors/magnific-popup.css","style"]
+:HL["/assets/css/vendors/odometer.css","style"]
+:HL["/assets/css/vendors/spacing.css","style"]
+:HL["/assets/css/main.css","style"]
+:HL["/assets/css/sticky-cards.css","style"]
+1:[["children",{"s":"__PAGE__","h":160}]]
+0:{"b":"waRFX-o-BLBG1DjG_XjYi","t":{"t":{"s":"","h":80,"c":"$Q1"}}}

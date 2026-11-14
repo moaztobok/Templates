@@ -1,3 +1,5 @@
+"use client";
+
 import RevealText from "@/shared/effects/RevealText";
 
 // About 3 Section 7 - FAQ

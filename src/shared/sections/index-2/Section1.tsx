@@ -1,4 +1,6 @@
-import { Link } from "react-router-dom";
+"use client";
+
+import Link from "next/link";
 const ARROW_SVG = (
     <svg xmlns="http://www.w3.org/2000/svg" width="9" height="10" viewBox="0 0 9 10" fill="none">
         <path
@@ -69,7 +71,7 @@ export default function Section1({ classList }: { classList?: string }) {
                             <div className="d-flex flex-wrap align-items-center justify-content-between gap-2">
                                 <div className="at-hero-social style-2">
                                     {SOCIAL_LINKS.map(({ label, href }) => (
-                                        <Link key={label} to={href}>
+                                        <Link key={label} href={href}>
                                             {label}
                                             {ARROW_SVG}
                                         </Link>

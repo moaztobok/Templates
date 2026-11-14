@@ -1,4 +1,6 @@
-import { Link } from "react-router-dom";
+"use client";
+
+import Link from "next/link";
 import RevealText from "@/shared/effects/RevealText";
 
 // About 1 Section 2 - Who We Are / Our Journey
@@ -85,13 +87,13 @@ export default function Section2() {
                             data-fade-from="bottom"
                             data-ease="bounce"
                         >
-                            <Link className="at-btn-circle bg-neutral-700" to="/pricing">
+                            <Link className="at-btn-circle bg-neutral-700" href="/pricing">
                                 {ARROW_CIRCLE_SVG}
                             </Link>
-                            <Link className="at-btn z-index-1 bg-neutral-700" to="/pricing">
+                            <Link className="at-btn z-index-1 bg-neutral-700" href="/pricing">
                                 Start a Project
                             </Link>
-                            <Link className="at-btn-circle bg-neutral-700" to="/pricing">
+                            <Link className="at-btn-circle bg-neutral-700" href="/pricing">
                                 {ARROW_CIRCLE_SVG}
                             </Link>
                         </div>
@@ -101,7 +103,7 @@ export default function Section2() {
                 <div className="row g-4">
                     <div className="col-lg-4">
                         <div className="alt-portfolio-item mb-30 at-hover-item">
-                            <Link to="#" className="alt-portfolio-thumb mb-15 p-relative fix d-block">
+                            <Link href="#" className="alt-portfolio-thumb mb-15 p-relative fix d-block">
                                 <img
                                     className="w-100 scale-img-from-to"
                                     data-value-1="1.5"
@@ -126,7 +128,7 @@ export default function Section2() {
                             </Link>
                             <div className="alt-portfolio-content d-flex justify-content-between align-items-center bg-neutral-700">
                                 <h5 className="alt-portfolio-title mb-0">
-                                    <Link to="#" className="common-underline text-white">
+                                    <Link href="#" className="common-underline text-white">
                                         Orisa Nova<sup>®</sup>
                                     </Link>
                                 </h5>
@@ -148,7 +150,7 @@ export default function Section2() {
                                         </h6>
                                         <p className="journey-list__desc">{item.desc}</p>
                                     </div>
-                                    <Link to="#" className="journey-list__link" aria-label="View details">
+                                    <Link href="#" className="journey-list__link" aria-label="View details">
                                         {ARROW_SVG}
                                     </Link>
                                 </li>

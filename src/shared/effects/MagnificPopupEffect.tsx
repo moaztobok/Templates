@@ -1,5 +1,7 @@
+"use client";
+
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { usePathname } from "next/navigation";
 type WindowWithGlobals = Window & {
     jQuery?: ((selector: string) => {
         magnificPopup: (opts: object) => unknown;
@@ -55,7 +57,7 @@ const initPopups = () => {
 };
 
 export default function MagnificPopupEffect() {
-    const pathname = useLocation().pathname;
+    const pathname = usePathname();
 
     useEffect(() => {
         let cancelled = false;

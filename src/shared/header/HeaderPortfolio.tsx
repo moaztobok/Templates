@@ -1,14 +1,16 @@
-import { Link, NavLink } from "react-router-dom";
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { MainMenuRootList } from "@/shared/mobile-menu/MobileMenuCloneContext";
 import ThemeSwitcher from "@/shared/ThemeSwitcher";
 
-const NAV_ITEMS: { to: string; label: string; end?: boolean }[] = [
-  { to: "/", label: "Home", end: true },
-  { to: "/about", label: "About" },
-  { to: "/projects", label: "Projects" },
-  { to: "/contact", label: "Contact" },
-  { to: "/sections", label: "Sections" },
+const NAV_ITEMS: { href: string; label: string }[] = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/projects", label: "Projects" },
+  { href: "/contact", label: "Contact" },
 ];
 
 function LinkSwap({ label }: { label: string }) {
@@ -27,6 +29,7 @@ interface HeaderPortfolioProps {
 }
 
 export default function HeaderPortfolio({ onOpenSearch, onToggleSidebar, onOpenHamburgerMenu }: HeaderPortfolioProps) {
+  const pathname = usePathname();
   const [stickyVisible, setStickyVisible] = useState(false);
 
   useEffect(() => {
@@ -47,7 +50,7 @@ export default function HeaderPortfolio({ onOpenSearch, onToggleSidebar, onOpenH
           <div className="row align-items-center">
             <div className="col-xl-2 col-6">
               <div className="at-header-logo">
-                <Link to="/" className="text-decoration-none d-inline-flex align-items-center gap-2">
+                <Link href="/" className="text-decoration-none d-inline-flex align-items-center gap-2">
                   <img width={30} height={30} src="/assets/imgs/template/logo/favicon.svg" alt="Dreammbymoaz" />
                   <h6 className="fw-700 fz-24 mb-0">Dreammbymoaz</h6>
                 </Link>
@@ -57,17 +60,16 @@ export default function HeaderPortfolio({ onOpenSearch, onToggleSidebar, onOpenH
               <div className="at-main-menu d-inline-flex justify-content-center">
                 <nav className="at-mobile-menu-active">
                   <MainMenuRootList>
-                    {NAV_ITEMS.map((item) => (
-                      <li key={item.to}>
-                        <NavLink
-                          to={item.to}
-                          end={item.end}
-                          className={({ isActive }) => (isActive ? "active" : undefined)}
-                        >
-                          <LinkSwap label={item.label} />
-                        </NavLink>
-                      </li>
-                    ))}
+                    {NAV_ITEMS.map((item) => {
+                      const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+                      return (
+                        <li key={item.href}>
+                          <Link href={item.href} className={isActive ? "active" : undefined}>
+                            <LinkSwap label={item.label} />
+                          </Link>
+                        </li>
+                      );
+                    })}
                   </MainMenuRootList>
                 </nav>
               </div>

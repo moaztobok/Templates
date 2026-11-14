@@ -1,3 +1,5 @@
+"use client";
+
 import PortfolioCard2 from "@/shared/cards/PortfolioCard2";
 import PortfolioFilterSort, { type FilterValue } from "@/shared/sections/portfolio-1/PortfolioFilterSort";
 

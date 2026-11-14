@@ -1,4 +1,6 @@
-import { Link } from "react-router-dom";
+"use client";
+
+import Link from "next/link";
 import RevealText from "@/shared/effects/RevealText";
 
 // About 1 Section 4 - Contact Us / Get in touch
@@ -179,12 +181,12 @@ export default function Section4({ classList = "" }: { classList?: string }) {
                                                     <br className="d-block" />
                                                     Phone:{" "}
                                                     <span className="neutral-900">
-                                                        <Link to={office.phoneHref}>{office.phone}</Link>
+                                                        <Link href={office.phoneHref}>{office.phone}</Link>
                                                     </span>
                                                     <br className="d-block" />
                                                     Email:{" "}
                                                     <span className="neutral-900">
-                                                        <Link to={office.emailHref}>{office.email}</Link>
+                                                        <Link href={office.emailHref}>{office.email}</Link>
                                                     </span>
                                                 </span>
                                             </div>
@@ -199,7 +201,7 @@ export default function Section4({ classList = "" }: { classList?: string }) {
                                     {SOCIAL_ITEMS.map((item, i) => (
                                         <li key={i}>
                                             <Link
-                                                to={item.href}
+                                                href={item.href}
                                                 className="at-social__link d-flex align-items-center gap-2"
                                                 aria-label={item.ariaLabel}
                                             >
@@ -269,11 +271,11 @@ export default function Section4({ classList = "" }: { classList?: string }) {
                             </div>
                             <p className="sec-4-about-form__disclaimer">
                                 By submitting, you agree to our{" "}
-                                <Link to="#" className="sec-4-about-form__link">
+                                <Link href="#" className="sec-4-about-form__link">
                                     Terms
                                 </Link>{" "}
                                 and{" "}
-                                <Link to="#" className="sec-4-about-form__link">
+                                <Link href="#" className="sec-4-about-form__link">
                                     Privacy Policy
                                 </Link>
                                 .

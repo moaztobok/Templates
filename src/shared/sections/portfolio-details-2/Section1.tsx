@@ -1,4 +1,6 @@
-import { Link } from "react-router-dom";
+"use client";
+
+import Link from "next/link";
 import SwiperDynamic from "@/shared/components/SwiperDynamic";
 
 const ARROW_SVG = (
@@ -42,7 +44,7 @@ export default function Section1() {
                         <h5 className="fw-600 mb-0">Fashion Brand Identity Design</h5>
                     </div>
                     <div className="col-md-3 ms-auto text-md-end">
-                        <Link to="#" className="border-bottom-900 d-inline-block">
+                        <Link href="#" className="border-bottom-900 d-inline-block">
                             <span className="at-btn common-black text-uppercase bg-transparent mb-10 rounded-0 p-0">
                                 <span className="text-uppercase">
                                     <span className="text-1">live demo</span>

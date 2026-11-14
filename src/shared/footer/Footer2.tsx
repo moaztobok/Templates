@@ -1,5 +1,5 @@
 import { forwardRef } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const ARROW_SVG = (
   <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -36,7 +36,7 @@ function FooterServiceTag({ label }: { label: string }) {
   );
 }
 
-const Footer2 = forwardRef<HTMLElement, Record<string, never>>(function Footer2(_, ref) {
+const Footer2 = forwardRef<HTMLElement>(function Footer2(_, ref) {
   return (
     <footer ref={ref} className="footer-fixed-bottom bg-neutral-950 changeless">
       <div className="at-footer-area mp-footer-style mp-footer-style-2 pt-120 pb-0">
@@ -45,7 +45,7 @@ const Footer2 = forwardRef<HTMLElement, Record<string, never>>(function Footer2(
             <div className="col-lg-4">
               <div className="d-flex flex-wrap align-items-start gap-5">
                 <div className="at-header-logo">
-                  <Link to="/" className="text-decoration-none d-inline-flex align-items-center gap-2">
+                  <Link href="/" className="text-decoration-none d-inline-flex align-items-center gap-2">
                     <img data-width="30" src="/assets/imgs/template/logo/favicon-dark.svg" alt="Orisa" width={30} height={30} />
                     <h6 className="fw-700 text-white mb-0 fz-24">Orisa</h6>
                   </Link>
@@ -71,35 +71,35 @@ const Footer2 = forwardRef<HTMLElement, Record<string, never>>(function Footer2(
                 <div className="alt-footer-link-item col-6">
                   <ul>
                     <li className="mb-15">
-                      <Link to="/">Home</Link>
+                      <Link href="/">Home</Link>
                     </li>
                     <li className="mb-15">
-                      <Link to="/about-1">About</Link>
+                      <Link href="/about-1">About</Link>
                     </li>
                     <li className="mb-15">
-                      <Link to="/portfolio-1">Works</Link>
+                      <Link href="/portfolio-1">Works</Link>
                     </li>
                     <li className="mb-15">
-                      <Link to="/archive-1">Blog</Link>
+                      <Link href="/archive-1">Blog</Link>
                     </li>
                     <li className="mb-15">
-                      <Link to="/contact-1">Contact</Link>
+                      <Link href="/contact-1">Contact</Link>
                     </li>
                   </ul>
                 </div>
                 <div className="alt-footer-link-item col-6">
                   <ul>
                     <li className="mb-15">
-                      <Link to="/product-archive">Shop</Link>
+                      <Link href="/product-archive">Shop</Link>
                     </li>
                     <li className="mb-15">
-                      <Link to="/pricing">Pricing</Link>
+                      <Link href="/pricing">Pricing</Link>
                     </li>
                     <li className="mb-15">
-                      <Link to="/product-cart">Cart</Link>
+                      <Link href="/product-cart">Cart</Link>
                     </li>
                     <li className="mb-15">
-                      <Link to="/product-checkout">Checkout</Link>
+                      <Link href="/product-checkout">Checkout</Link>
                     </li>
                   </ul>
                 </div>

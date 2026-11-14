@@ -1,4 +1,6 @@
-import { useLocation } from "react-router-dom";
+"use client";
+
+import { usePathname } from "next/navigation";
 import { useDataBackground } from "@/shared/hooks/useDataBackground";
 import useCollapse from "@/shared/hooks/useCollapse";
 import useImageHoverEffects from "@/shared/utils/ImageHoverEffects";
@@ -36,8 +38,8 @@ import CursorTrailEffect from "@/shared/effects/CursorTrailEffect";
  * SPA navigation doesn't remount MainLayout like Next App Router does, so we key by pathname.
  */
 export default function GlobalEffects() {
-  const location = useLocation();
-  const key = location.pathname;
+  const pathname = usePathname();
+  const key = pathname;
 
   // Hook-based effects: bind document-level handlers fresh on each route.
   useDataBackground();

@@ -1,9 +1,11 @@
+"use client";
+
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { usePathname } from "next/navigation";
 const isDarkPath = (path: string) => /-dark\/?$/.test(path);
 
 export default function ThemeRouteSync() {
-    const pathname = useLocation().pathname;
+    const pathname = usePathname();
 
     useEffect(() => {
         const html = document.documentElement;

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { OffcanvasMenuMount } from "@/shared/mobile-menu/MobileMenuCloneContext";
 import MenuClone from "@/shared/mobile-menu/MenuClone";
 
@@ -31,7 +31,7 @@ function CloseIconSvg() {
   );
 }
 
-const socialLinks = [
+const socialLinks: { label: string; href: string; ariaLabel: string; path: string; viewBox?: string; h?: number }[] = [
   {
     label: "Twitter",
     href: "#",
@@ -64,7 +64,7 @@ const socialLinks = [
     viewBox: "0 0 18 13",
     h: 13,
   },
-] as const;
+];
 
 function SocialGrid() {
   return (
@@ -117,7 +117,7 @@ export default function SideBar({ open, hamburgerOpen, onClose }: SideBarProps) 
         <div className={`at-offcanvas ${open ? "opened" : ""}`}>
           <div className="at-offcanvas-top d-flex align-items-center justify-content-between">
             <div className="at-offcanvas-logo">
-              <Link to="/" className="text-decoration-none d-inline-flex align-items-center gap-2">
+              <Link href="/" className="text-decoration-none d-inline-flex align-items-center gap-2">
                 <img data-width="30" src="/assets/imgs/template/logo/favicon.svg" alt="Orisa" width={30} height={30} />
                 <h6 className="fw-700 fz-24 mb-0">Orisa</h6>
               </Link>
@@ -185,7 +185,7 @@ export default function SideBar({ open, hamburgerOpen, onClose }: SideBarProps) 
         <div className="at-offcanvas-2-wrapper offcanvas-menu sidebar-left">
           <div className="at-offcanvas-2-left">
             <div className="at-header-logo d-flex justify-content-between align-items-center mb-50">
-              <Link to="/" className="text-decoration-none d-inline-flex align-items-center gap-2">
+              <Link href="/" className="text-decoration-none d-inline-flex align-items-center gap-2">
                 <img
                   className="dark-mode-invert"
                   data-width="30"

@@ -1,5 +1,7 @@
+"use client";
+
 import { useEffect, useRef } from "react";
-import { useLocation } from "react-router-dom";
+import { usePathname } from "next/navigation";
 
 type ScrollSmootherInstance = {
   kill?: () => void;
@@ -22,7 +24,7 @@ export default function SmoothScrollEffect() {
   const scrollSmootherRef = useRef<ScrollSmootherInstance | null>(null);
   const footerTimelineRef = useRef<TimelineInstance | null>(null);
   const resizeObserverRef = useRef<ResizeObserver | null>(null);
-  const { pathname } = useLocation();
+  const pathname = usePathname();
 
   // One-time init of ScrollSmoother + footer reveal.
   useEffect(() => {

@@ -1,3 +1,5 @@
+"use client";
+
 import RevealText from "@/shared/effects/RevealText";
 import OdometerCounter from "@/shared/elements/OdometerCounter";
 

@@ -45,7 +45,7 @@ export default function CardAwardPreviewEffect() {
         preview.appendChild(previewImg);
         document.body.appendChild(preview);
       }
-      const img = preview.querySelector("img");
+      const img = preview.querySelector("img") as HTMLImageElement;
       if (!img) return;
 
       let xTo: GsapQuickTo | null = null;
